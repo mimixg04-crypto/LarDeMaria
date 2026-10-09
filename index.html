@@ -34,7 +34,7 @@
             
             <div class="botoes-grupo">
                 <a href="#sobre" class="btn-verde-escuro">Conheça nossa história</a>
-                <label for="check-modal" class="btn-coral">+ Cadastrar-se</label>
+                <label for="check-modal" id="btn-cadastrar-home" class="btn-coral">+ Cadastrar-se</label>
             </div>
 
             <div class="secao-subcards">
@@ -240,6 +240,7 @@
                 onAuthStateChanged(auth, async (usuario) => {
                     const btnNav = document.querySelector(".btn-coral-nav");
                     const cardBloqueado = document.querySelector(".card-bloqueado");
+                    const btnCadastrarHome = document.getElementById("btn-cadastrar-home");
 
                     if (usuario) {
                         let nomeUsuario = usuario.email.split('@')[0];
@@ -268,11 +269,19 @@
                                 <p>Agora você pode agendar uma visita.</p>
                             `;
                         }
+
+                        if (btnCadastrarHome) {
+                            btnCadastrarHome.style.display = "none";
+                        }
                     } else {
                         if (btnNav) {
                             btnNav.textContent = "Entrar / Cadastrar";
                             btnNav.setAttribute("for", "check-modal");
                             btnNav.onclick = null;
+                        }
+
+                        if (btnCadastrarHome) {
+                            btnCadastrarHome.style.display = "block";
                         }
                     }
                 });
