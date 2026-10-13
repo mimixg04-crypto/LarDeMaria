@@ -343,13 +343,13 @@
                         
                         dialog.innerHTML = `
                             <p>Tem certeza que deseja encerrar a sessão?</p>
-                            <button id="btn-Sim-logout">Sim</button>
+                            <button id="btn-Continuar-logout">Continuar</button>
                             <button id="btn-cancelar-logout">Cancelar</button>
                         `;
                         document.body.appendChild(dialog);
                     }
 
-                    dialog.querySelector("#btn-Sim-logout").onclick = async () => {
+                    dialog.querySelector("#btn-Continuar-logout").onclick = async () => {
                         dialog.close();
                         try {
                             await signOut(auth);
