@@ -18,22 +18,22 @@
     </header>
 
     <nav id="menu">
-        <a href="index.html" class="item-menu active">Início</a>
-        <a href="sobre.html" class="item-menu">Sobre</a>
-        <a href="acolhimento.html" class="item-menu">Acolhimento</a>
-        <a href="ajudar.html" class="item-menu">Como ajudar</a>
-        <a href="apadrinhar.html" class="item-menu">Apadrinhar</a>
-        <a href="agendar.html" class="item-menu">Contato</a>
+        <a href="#inicio" class="item-menu active">Início</a>
+        <a href="#sobre" class="item-menu">Sobre</a>
+        <a href="#acolhimento" class="item-menu">Acolhimento</a>
+        <a href="#ajudar" class="item-menu">Como ajudar</a>
+        <a href="#agendar" class="item-menu">Contato</a>
     </nav>
 
     <main id="conteudo">
-        <section id="inicio" class="pagina" style="display: block;">
+
+        <section id="inicio" class="pagina">
             <div class="tag-sub">✦ MAIS DE 30 ANOS DE CUIDADO</div>
             <h1 class="titulo-principal">Um lar de cuidado, <span class="destaque-coral">proteção e esperança.</span></h1>
             <p class="descricao">Há mais de três décadas, o Lar de Maria acolhe crianças em situação de vulnerabilidade, oferecendo proteção, cuidado e oportunidades para um novo começo.</p>
             
             <div class="botoes-grupo">
-                <a href="sobre.html" class="btn-verde-escuro">Conheça nossa história</a>
+                <a href="#sobre" class="btn-verde-escuro">Conheça nossa história</a>
                 <label for="check-modal" id="btn-cadastrar-home" class="btn-coral">+ Cadastrar-se</label>
             </div>
 
@@ -49,11 +49,13 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <input type="checkbox" id="check-modal" style="display: none;">
     <div id="janela-modal">
         <div class="conteudo-modal">
+            
             <input type="radio" name="aba-modal" id="tab-login" checked style="display: none;">
             <input type="radio" name="aba-modal" id="tab-cadastro" style="display: none;">
 
@@ -76,4 +78,14 @@
                 <input id="cadastronome" type="text" placeholder="Nome completo" class="campo-input">
                 <input id="cadastroemail" type="email" placeholder="Digite seu e-mail" class="campo-input">
                 <input id="cadastrosenha" type="password" placeholder="Crie uma senha" class="campo-input">
-                <button type="button" class="btn-
+                <button type="button" class="btn-coral-block" onclick="confirmarcadastro()">Cadastrar</button>
+            </div>
+
+            <label for="check-modal" class="btn-fechar">Fechar</label>
+
+            <script type="module" src="script.js"></script>
+        </div>
+    </div>
+
+</body>
+</html>
